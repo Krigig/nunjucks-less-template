@@ -1,0 +1,6 @@
+{% macro input(name, value = '', type = 'text') %}
+
+  <label class="form__title" for="user-{{ name }}">{{ text }}</label>
+  <input class="form__input" id="user-{{ name }}" type="{{ type }}" name="{{ name }}" value="{{ value | escape }}">
+
+{% endmacro %}
