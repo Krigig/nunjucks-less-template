@@ -2,24 +2,30 @@
   "mainInfo": [
     {
       "title": "Полное ФИО",
-      "data": "Шкатулова Кристина Вячеславовна"
+      "name": "name",
+      "data": "Шкатулова Кристина Вячеславовна" 
     },
     {
       "title": "Год рождения",
+      "name": "birthday",
       "data": ""
     },
     {
       "title": "Место жительства",
+      "name": "location",
       "data": ""
     },
     {
       "title": "Скайп",
+      "name": "skype",
       "data": ""
     },
     {
       "title": "Почта",
+      "name": "email",
       "data": ""
     }
 
   ]
 }
+

@@ -1,0 +1,19 @@
+{"futurePlans": [
+    {
+      "title": "Верстать",
+      "checked": "" 
+    },
+    {
+        "title": "Прокачиваться в JS",
+        "checked": "checked" 
+      },
+      {
+        "title": "Менеджерство",
+        "checked": "" 
+      },
+      {
+        "title": "Другое",
+        "checked": "" 
+      }
+    ]
+}

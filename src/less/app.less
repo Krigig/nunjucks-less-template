@@ -1,5 +1,28 @@
+@font-face {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic');
+}
+
+@font-face {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css?family=PT+Sans:700&display=swap&subset=cyrillic');
+}
+
+@font-face {
+  font-family: 'Courier New', arial;
+  font-weight: normal;
+  font-display: swap;
+  src: url(http://allfont.ru/allfont.css?fonts=courier-new);
+}
  
  body {
+     font-family: 'PT Sans';
+     font-weight: normal;
+     font-size: 23px;
      background-color: #797979;
   }
 
@@ -7,4 +30,17 @@
       display: block;
       margin: 0 auto;
      margin-top: 55px;
+     margin-bottom: 60px;
   }
+
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+

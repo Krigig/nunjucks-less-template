@@ -1,6 +1,27 @@
-{% macro input(name, value = '', type = 'text') %}
+{% macro input(title, name,value = '', type = 'text') %}
 
-  <label class="form__title" for="user-{{ name }}">{{ text }}</label>
-  <input class="form__input" id="user-{{ name }}" type="{{ type }}" name="{{ name }}" value="{{ value | escape }}">
+  <label class="main-info__title" for="user-{{ name }}">{{ title }}</label>
+  <input class="main-info__input" id="user-{{ name }}" type="{{ type }}" name="{{ name }}" value="{{ value | escape }}">
+
+{% endmacro %}
+
+
+
+{% macro checkbox(title, checked=" ") %}
+
+  <label class="knowledge__value">
+      <input class="visually-hidden" type="checkbox" name="{{ title }}" {{ checked }}>
+      <span class="knowledge__checkbox-indicator"></span>{{ title }}
+    </label>
+
+{% endmacro %}
+
+
+{% macro radioButton(title, checked=" ") %}
+
+    <label class="future__value">
+      <input class="visually-hidden" type="radio" name="title" value="title" {{ checked }}>
+      <span class="future__radio-indicator"></span>{{ title }}
+    </label> 
 
 {% endmacro %}

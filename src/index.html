@@ -1,5 +1,7 @@
 {% extends "./templates/decorators/_base.html"  %}
 {% from './templates/macros/header.html' import header %}
+{% from './templates/macros/slider.html' import slider %}
+{% import "./templates/macros/form.html" as form %}
 {% block page_title %}
 
 {% endblock %}
@@ -10,5 +12,59 @@
 <div class="container">
 	{{header()}}
 	<img class="tilte" src="./images/title.png" alt="Дело">
+
+	<section class="form">
+		<form class="form__field" method="post" action="">
+			<fieldset class="form__block">
+				<legend class="visually-hidden">Персональные данные</legend>
+				<ul class="form__items main-info">
+					{% for part in mainInfo %}
+				  		<li class="main-info__item">
+							{{ form.input(part.title, part.name, part.data)}}
+						</li>
+					{% endfor %}
+				</ul>
+			</fieldset>
+			<fieldset class="form__block">
+				<legend class="form__caption">Расскажите о себе чекбоксами</legend>
+				<p class="form__description">Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
+				<ul class="form__items knowledge">
+					{% for part in dictionaryKnowledge %}
+				  		<li class="knowledge__item">
+							{{ form.checkbox(part)}}
+						</li>
+					{% endfor %}
+				</ul>
+			</fieldset>
+			<fieldset class="form__block">
+					<legend class="form__caption">Уровень владения JavaScript</legend>
+					{{slider()}}
+				</fieldset>
+			<fieldset class="form__block">
+				<legend class="form__caption">Расскажите о себе словами</legend>
+				<p class="form__description">Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
+				<textarea class="form__text-about-me" name="aboutMe" id="text" rows="3" placeholder="Ну-ууу-уу... Ээээ..."></textarea>
+			</fieldset>
+			<fieldset class="form__block">
+					<legend class="form__caption">Какие у вас планы на будущее?</legend>
+					<p class="form__description">Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.</p>
+					<ul class="form__items future">
+						{% for part in futurePlans %}
+							<li class="future__item">
+								{{ form.radioButton(part.title, part.checked)}}
+							</li>
+						{% endfor %}
+					</ul>
+				</fieldset>
+				<fieldset class="form__block">
+						<legend class="visually-hidden">Персональные данные</legend>
+						<ul class="form__items main-info">
+							<li class="main-info__item main-info__item--short">
+								{{ form.input("Дата заполнения", "date", "14.08.2019")}}
+							</li>
+						</ul>
+				</fieldset>
+		</form>
+		
 </div>
 {% endblock %}

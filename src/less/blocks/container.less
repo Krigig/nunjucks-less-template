@@ -3,4 +3,22 @@
   padding: 70px 117px 65px 110px;
   margin: 0 auto;
   background: url("../images/background.jpg") repeat;
+
+  position: relative;
+  @media(max-width: 950px) {
+    padding: 40px 47px 65px 40px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+
+    top: 48px;
+    right: 48px;
+
+    width: 252px;
+    height: 106px;
+
+    background-image: url("../images/secret.png")
+  }
 }
